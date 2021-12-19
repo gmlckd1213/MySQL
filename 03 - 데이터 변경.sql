@@ -33,13 +33,20 @@ UPDATE employee
 	SET phone = '010-1239-1239'
 	WHERE emp_id = 'S0001';
             
-            
--- Q) 홍길동(S0001)의 이름을 '홍길명'으로 변경
 
+SELECT * FROM employee;
+-- Q) 홍길동(S0001)의 이름을 '홍길명'으로 변경
+UPDATE employee
+	SET emp_name = '홍길명'
+    WHERE emp_name = '홍길동';
 
 
 -- Q) 정보시스템(SYS) 직원의 급여를 일괄적으로 1,000만원 인상
-
+UPDATE employee
+	SET salary = salary + 1000
+    WHERE dept_id = 'SYS';
+    
+SELECT * FROM employee;
 
 
 -- 3) DELETE
